@@ -1,7 +1,8 @@
 {
   "name": "heroku-demo-react",
   "version": "1.0.0",
-  "description": "A sample heroku demo React",
+  "author": "Vitalijs Karpusa <vkarpusha@gmail.com> (http://www.karpusa.lv)",
+  "description": "React demo parser youtube video with deploy to herok",
   "engines": {
     "node": "5.9.1"
   },
@@ -10,15 +11,18 @@
     "type": "git",
     "url": "https://github.com/karpusa/heroku-demo-react"
   },
+  "license": "MIT",
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "react",
+    "youtube"
   ],
   "scripts": {
     "localhost": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "postinstall": "webpack -p",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "devDependencies": {
   },

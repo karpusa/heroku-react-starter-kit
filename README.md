@@ -1,32 +1,36 @@
-# node-js-getting-started
+# heroku-demo-react
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+It simple demo parser youtube video with config deployment to heroku
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+## Feature
+
+* Search video
+* List video
+* Detail video
+
+## Demo
+
+https://heroku-demo-react.herokuapp.com
 
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
+```bash
+npm install           # install nodejs dependencies
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
+```bash
+npm run localhost     # running local server on http://localhost:8080/webpack-dev-server/
 ```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+```bash
+npm run postinstall   # prepare bundle.js for production server
+```
+
+```bash
+npm start             # start node server
+```
 
 ## Documentation
 

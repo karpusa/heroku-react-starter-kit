@@ -2,11 +2,18 @@
 
 It simple demo parser youtube video with config deployment to heroku
 
-## Feature
+## Functions
 
 * Search video
 * List video
 * Detail video
+
+## Features
+
+* react
+* redux
+* thunk middleware
+* webpack
 
 ## Demo
 

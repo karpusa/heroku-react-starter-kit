@@ -6,12 +6,6 @@ import { searchVideo } from '../actions/index';
 
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-
-    //this.onInputChange = this.onInputChange.bind(this);
-  }
-
   searchVideo = _.debounce((term) => {
     this.props.searchVideo(term);
   }, 300);

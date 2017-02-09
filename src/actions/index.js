@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
 
 export const SEARCH_VIDEO = 'SEARCH_VIDEO';
+export const SELECT_VIDEO = 'SELECT_VIDEO';
 
 export function searchVideo(term) {
   return (dispatch) => {
@@ -13,7 +14,17 @@ export function searchVideo(term) {
                 type: SEARCH_VIDEO,
                 payload: videos
             }
-        )
+        );
+        if (videos[0]) {
+            dispatch(selectVideo(videos[0]));
+        }
     });
+  };
+}
+
+export function selectVideo(video) {
+  return {
+    type: SELECT_VIDEO,
+    payload: video
   };
 }

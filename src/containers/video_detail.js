@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import SelectedVideoSelector from '../selectors/selected_video.js';
 
 class VideoDetail extends Component {
   render() {
@@ -24,10 +25,9 @@ class VideoDetail extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  // Whatever is returned will show up as props
+const mapStateToProps = state => {
   return {
-    video: state.selected_video
+    video: SelectedVideoSelector(state)
   };
 }
 

@@ -18,11 +18,12 @@
     "express",
     "react",
     "redux",
+    "reselect",
     "youtube"
   ],
   "scripts": {
     "localhost": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "postinstall": "webpack -p",
+    "postinstall": "NODE_ENV=production webpack -p",
     "start": "node index.js"
   },
   "devDependencies": {},
@@ -38,6 +39,7 @@
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
     "redux-thunk": "^2.2.0",
+    "reselect": "^2.5.4",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
     "youtube-api-search": "0.0.5"

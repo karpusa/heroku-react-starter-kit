@@ -13,6 +13,7 @@ It simple demo parser youtube video with config deployment to heroku
 * react
 * redux
 * thunk middleware
+* reselect
 * webpack
 
 ## Demo

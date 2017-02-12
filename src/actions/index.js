@@ -16,15 +16,15 @@ export function searchVideo(term) {
             }
         );
         if (videos[0]) {
-            dispatch(selectVideo(videos[0]));
+            dispatch(selectVideo(videos[0].id.videoId));
         }
     });
   };
 }
 
-export function selectVideo(video) {
+export function selectVideo(id) {
   return {
     type: SELECT_VIDEO,
-    payload: video
+    payload: id
   };
 }

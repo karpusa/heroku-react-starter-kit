@@ -10,8 +10,8 @@ class VideoList extends Component {
       return (
         <VideoListItem
           onVideoSelect={(video)=>{
-            if (this.props.selected_video.etag !== video.etag) {
-              this.props.selectVideo(video);
+            if (this.props.selected_video_id !== video.id.videoId) {
+              this.props.selectVideo(video.id.videoId);
             }
           }}
           key={video.etag}
@@ -31,7 +31,7 @@ function mapStateToProps(state) {
   // Whatever is returned will show up as props
   return {
     videos: state.videos,
-    selected_video: state.selected_video
+    selected_video_id: state.selected_video_id
   };
 }
 

@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import VideoListItem from '../components/video_list_item';
 import { selectVideo } from '../actions/index';
 
 class VideoList extends Component {
+  constructor(props) {
+    super(props);
+    this.onVideoSelect = this.onVideoSelect.bind(this);
+  }
+  onVideoSelect(video) {
+    if (this.props.selected_video_id !== video.id.videoId) {
+      this.props.selectVideo(video.id.videoId);
+    }
+  }
   render() {
     const videoItems = this.props.videos.map((video) => {
       return (
         <VideoListItem
-          onVideoSelect={(video)=>{
-            if (this.props.selected_video_id !== video.id.videoId) {
-              this.props.selectVideo(video.id.videoId);
-            }
-          }}
+          onVideoSelect={this.onVideoSelect}
           key={video.etag}
           video={video}
           active={this.props.selected_video_id === video.id.videoId}

@@ -25,3 +25,7 @@
 .list-group-item:hover {
   background-color: #eee;
 }
+
+.list-group-item.is-active {
+  background: #e8e8e8;
+}

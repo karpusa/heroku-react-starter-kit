@@ -15,7 +15,9 @@ class VideoList extends Component {
             }
           }}
           key={video.etag}
-          video={video} />
+          video={video}
+          active={this.props.selected_video_id === video.id.videoId}
+          />
       );
     });
 

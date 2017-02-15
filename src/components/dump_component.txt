@@ -1,0 +1,12 @@
+// Your dump component
+import React from 'react';
+
+const Dumb = ({class, text}) => {
+  return (
+    <div className={class}>
+      {text}
+    </div>
+  )
+};
+
+export default Dumb;

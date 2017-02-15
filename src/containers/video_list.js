@@ -1,7 +1,7 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import VideoListItem from '../components/video_list_item';
+import VideoListItem from './video_list_item';
 import { selectVideo } from '../actions/index';
 
 class VideoList extends Component {
@@ -9,11 +9,11 @@ class VideoList extends Component {
     super(props);
     this.onVideoSelect = this.onVideoSelect.bind(this);
   }
+
   onVideoSelect(video) {
-    if (this.props.selected_video_id !== video.id.videoId) {
-      this.props.selectVideo(video.id.videoId);
-    }
+    this.props.selectVideo(video.id.videoId);
   }
+
   render() {
     const videoItems = this.props.videos.map((video) => {
       return (
@@ -21,7 +21,6 @@ class VideoList extends Component {
           onVideoSelect={this.onVideoSelect}
           key={video.etag}
           video={video}
-          active={this.props.selected_video_id === video.id.videoId}
           />
       );
     });
@@ -37,8 +36,7 @@ class VideoList extends Component {
 function mapStateToProps(state) {
   // Whatever is returned will show up as props
   return {
-    videos: state.videos,
-    selected_video_id: state.selected_video_id
+    videos: state.videos
   };
 }
 

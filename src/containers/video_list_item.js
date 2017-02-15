@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-//import Perf from 'react-addons-perf';
 
 class VideoListItem extends Component {
 
@@ -16,18 +15,11 @@ class VideoListItem extends Component {
     return false;
   }
 
-  componentDidUpdate() {
-    //Perf.stop()
-    //Perf.printInclusive()
-    //Perf.printWasted();
-    //Perf.printOperations();
-  }
-
   render() {
     const imageUrl = this.props.video.snippet.thumbnails.default.url;
     const isActive = this.props.selected_video_id === this.props.video.id.videoId ? ' is-active' : '';
     return (
-      <li onClick={() => { /*Perf.start();*/ this.props.onVideoSelect(this.props.video) }} className={"list-group-item" + isActive}>
+      <li onClick={() => this.props.onVideoSelect(this.props.video) } className={"list-group-item" + isActive}>
         <div className="video-list media">
           <div className="media-left">
             <img className="media-object" src={imageUrl} />

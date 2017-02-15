@@ -1,4 +1,6 @@
 import axios from 'axios';
+import mock from '../mock.json';
+//console.log(mock);
 
 const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
 const API_URL = 'https://www.googleapis.com/youtube/v3/search';
@@ -13,24 +15,34 @@ export function searchVideo(term) {
       key: API_KEY,
       q: term,
       type: 'video',
-      maxResults: 10
+      maxResults: 50
     };
 
-    axios.get(API_URL, { params: params })
-      .then(function(response) {
-        dispatch(
-          {
-            type: SEARCH_VIDEO,
-            payload: response.data.items
-          }
-        );
-        if (response.data.items[0]) {
-          dispatch(selectVideo(response.data.items[0].id.videoId));
-        }
-      })
-      .catch(function(error) {
-        console.error(error);
-      });
+    dispatch(
+      {
+        type: SEARCH_VIDEO,
+        payload: mock.videos
+      }
+    );
+    if (mock.videos[0]) {
+      dispatch(selectVideo(mock.videos[0].id.videoId));
+    }
+
+    // axios.get(API_URL, { params: params })
+    //   .then(function(response) {
+    //     dispatch(
+    //       {
+    //         type: SEARCH_VIDEO,
+    //         payload: response.data.items
+    //       }
+    //     );
+    //     if (response.data.items[0]) {
+    //       dispatch(selectVideo(response.data.items[0].id.videoId));
+    //     }
+    //   })
+    //   .catch(function(error) {
+    //     console.error(error);
+    //   });
   };
 }
 

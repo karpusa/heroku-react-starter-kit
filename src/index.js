@@ -4,11 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 //import ReduxPromise from 'redux-promise';
-import App from './containers/app';
-
 import reducers from './reducers';
-
-//const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
+import App from './containers/app';
 
 const store = createStore(reducers, compose(
       applyMiddleware(reduxThunk),

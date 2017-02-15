@@ -1,24 +1,36 @@
-//import axios from 'axios';
-import YTSearch from 'youtube-api-search';
+import axios from 'axios';
 
 const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
+const API_URL = 'https://www.googleapis.com/youtube/v3/search';
 
 export const SEARCH_VIDEO = 'SEARCH_VIDEO';
 export const SELECT_VIDEO = 'SELECT_VIDEO';
 
 export function searchVideo(term) {
   return (dispatch) => {
-    YTSearch({key: API_KEY, term: term}, (videos) => {
+    const params = {
+      part: 'snippet',
+      key: API_KEY,
+      q: term,
+      type: 'video',
+      maxResults: 10
+    };
+
+    axios.get(API_URL, { params: params })
+      .then(function(response) {
         dispatch(
-            {
-                type: SEARCH_VIDEO,
-                payload: videos
-            }
+          {
+            type: SEARCH_VIDEO,
+            payload: response.data.items
+          }
         );
-        if (videos[0]) {
-            dispatch(selectVideo(videos[0].id.videoId));
+        if (response.data.items[0]) {
+          dispatch(selectVideo(response.data.items[0].id.videoId));
         }
-    });
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
   };
 }
 

@@ -6,6 +6,7 @@ import SearchBar from './search_bar';
 import VideoList from './video_list';
 import VideoDetail from './video_detail';
 import Perf from 'react-addons-perf';
+import ProfTool from '../helpers/profTool';
 
 class App extends Component {
   constructor(props) {
@@ -17,15 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <a onClick={() => {
-          Perf.start();
-        }} >Start Perf</a><br/>
-        <a onClick={() => {
-          Perf.stop();
-          Perf.printInclusive();
-          //Perf.printWasted();
-          //Perf.printOperations();
-         }} >End Perf</a>
+        <ProfTool />
         <SearchBar />
         <VideoDetail />
         <VideoList />

@@ -12,18 +12,23 @@ import mock from '../mock.json';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.profToolEnable = false;
 
     if (window.location.search.indexOf('mock')===-1) {
       props.searchVideo('Simon\'s Cat');
     } else {
       props.searchMock(mock);
     }
+
+    if (window.location.search.indexOf('proftool') >= 0) {
+      this.profToolEnable = true;
+    }
   }
 
   render() {
     return (
       <div>
-        <ProfTool />
+        { this.profToolEnable && <ProfTool /> }
         <SearchBar />
         <VideoDetail />
         <VideoList />

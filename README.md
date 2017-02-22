@@ -13,12 +13,32 @@ It simple demo parser youtube video with config deployment to heroku
 * react
 * redux
 * thunk middleware
+* axios
 * reselect
 * webpack
+* postcss
+* classnames
+* react-addons-perf
 
 ## Demo
 
 https://heroku-demo-react.herokuapp.com
+
+## Mock data
+
+You can use mock data with 1000 items, add to url `mock`
+
+http://localhost:8080/webpack-dev-server/?mock
+
+## React perfomance tool
+
+To enable react perfomance tool add to url `proftool`
+
+http://localhost:8080/webpack-dev-server/?proftool
+
+Also you can use `mock` data and `proftool`
+
+http://localhost:8080/webpack-dev-server/?mock&proftool
 
 ## Running Locally
 
@@ -33,7 +53,7 @@ npm run localhost     # running local server on http://localhost:8080/webpack-de
 ```
 
 ```bash
-npm run postinstall   # prepare bundle.js for production server
+npm run postinstall   # prepare bundle.js for production server, used for heroku deployment
 ```
 
 ```bash

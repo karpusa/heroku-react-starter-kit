@@ -17,7 +17,7 @@ class VideoDetail extends Component {
         <div className="embed-responsive embed-responsive-16by9">
           <iframe className="embed-responsive-item" src={url}></iframe>
         </div>
-        <div className={styles.root.details}>
+        <div className={styles.details}>
           <div>{this.props.video.snippet.title}</div>
           <div>{this.props.video.snippet.description}</div>
         </div>

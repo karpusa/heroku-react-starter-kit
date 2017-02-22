@@ -6,6 +6,21 @@ const API_URL = 'https://www.googleapis.com/youtube/v3/search';
 export const SEARCH_VIDEO = 'SEARCH_VIDEO';
 export const SELECT_VIDEO = 'SELECT_VIDEO';
 
+export function searchMock(data) {
+  return (dispatch) => {
+    dispatch(
+      {
+        type: SEARCH_VIDEO,
+        payload: data.videos
+      }
+    );
+
+    if (data.videos[0]) {
+      dispatch(selectVideo(data.videos[0].id.videoId));
+    }
+  }
+}
+
 export function searchVideo(term) {
   return (dispatch) => {
     const params = {

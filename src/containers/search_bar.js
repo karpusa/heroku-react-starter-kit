@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { searchVideo } from '../actions/index';
-
+import styles from './search_bar.less';
 
 class SearchBar extends Component {
   searchVideo = _.debounce((term) => {
@@ -16,7 +16,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar">
+      <div className={styles.root}>
         <input
           onChange={event => this.onInputChange(event.target.value)} />
       </div>

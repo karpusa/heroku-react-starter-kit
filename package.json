@@ -19,14 +19,20 @@
     "react",
     "redux",
     "reselect",
+    "lint",
     "youtube"
   ],
   "scripts": {
     "localhost": "webpack-dev-server",
     "postinstall": "webpack -p",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint src"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.16.1",
+    "eslint-plugin-react": "^6.10.0"
+  },
   "dependencies": {
     "autoprefixer-core": "^6.0.1",
     "axios": "^0.15.3",
@@ -35,7 +41,7 @@
     "babel-plugin-react-css-modules": "^2.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "babel-preset-stage-1": "^6.1.18",
+    "babel-preset-stage-1": "^6.22.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",

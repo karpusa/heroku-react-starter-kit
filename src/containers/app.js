@@ -5,7 +5,6 @@ import { searchVideo, searchMock } from '../actions/index';
 import SearchBar from './search_bar';
 import VideoList from './video_list';
 import VideoDetail from './video_detail';
-import Perf from 'react-addons-perf';
 import ProfTool from '../helpers/profTool';
 import mock from '../mock.json';
 
@@ -25,6 +24,10 @@ class App extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
   render() {
     return (
       <div>
@@ -36,6 +39,11 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  searchMock: React.PropTypes.func.isRequired,
+  searchVideo: React.PropTypes.func.isRequired
+};
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ searchVideo, searchMock }, dispatch);

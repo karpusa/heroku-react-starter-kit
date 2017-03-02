@@ -9,12 +9,12 @@ const videosSelector = state => state.videos;
 const selectedVideoSelector = state => state.selected_video_id;
 
 const getVideo = (videos, selected_video_id) => {
-    const selectedVideo = _.filter(
+  const selectedVideo = _.filter(
         videos,
         {'id': {'videoId': selected_video_id} }
     );
-    return selectedVideo[0];
-}
+  return selectedVideo[0];
+};
 
 export default createSelector(
     videosSelector, // pick off a piece of state

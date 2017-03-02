@@ -6,24 +6,32 @@ import { searchVideo } from '../actions/index';
 import styles from './search_bar.less';
 
 class SearchBar extends Component {
+  constructor() {
+    super();
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   searchVideo = _.debounce((term) => {
     this.props.searchVideo(term);
   }, 300);
 
-  onInputChange(term) {
-    this.searchVideo(term);
+  handleChange(event) {
+    this.searchVideo(event.target.value);
   }
 
   render() {
     return (
       <div className={styles.root}>
-        <input
-          onChange={event => this.onInputChange(event.target.value)} />
+        <input onChange={this.handleChange} />
       </div>
     );
   }
-
 }
+
+SearchBar.propTypes = {
+  searchVideo: React.PropTypes.func.isRequired,
+};
+
 
 // function mapStateToProps(state) {
 //   // Whatever is returned will show up as props

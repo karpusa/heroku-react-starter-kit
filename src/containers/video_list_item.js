@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import styles from './video_list_item.less';
 import classNames from 'classnames';
 
 class VideoListItem extends Component {
+  constructor() {
+    super();
+    this.handleVideoSelect = this.handleVideoSelect.bind(this);
+  }
 
   shouldComponentUpdate(nextProps, nextState) {
     // Check item video id with and current selected id and next selected id
-    if  (
-          (this.props.video.id.videoId === this.props.selected_video_id) ||
-          (this.props.video.id.videoId === nextProps.selected_video_id)
-        ) {
-            return true;
-    }
-    return false;
+    return (this.props.video.id.videoId === this.props.selected_video_id) ||
+      (this.props.video.id.videoId === nextProps.selected_video_id);
+
+  }
+
+  handleVideoSelect() {
+    this.props.onVideoSelect(this.props.video)
   }
 
   render() {
@@ -25,10 +28,16 @@ class VideoListItem extends Component {
     });
 
     return (
-      <li onClick={() => this.props.onVideoSelect(this.props.video) } className={liClasses}>
+      <li
+          className={liClasses}
+          onClick={this.handleVideoSelect}
+      >
         <div className="media">
           <div className="media-left">
-            <img className="media-object" src={imageUrl} />
+            <img
+                className="media-object"
+                src={imageUrl}
+            />
           </div>
           <div className="media-body">
             <div className="media-heading">{this.props.video.snippet.title}</div>
@@ -37,8 +46,17 @@ class VideoListItem extends Component {
       </li>
     );
   }
-
 }
+
+VideoListItem.propTypes = {
+  onVideoSelect: React.PropTypes.func.isRequired,
+  selected_video_id: React.PropTypes.string,
+  video: React.PropTypes.object.isRequired
+};
+
+VideoListItem.defaultProps = {
+  selected_video_id: null
+};
 
 function mapStateToProps(state) {
   // Whatever is returned will show up as props

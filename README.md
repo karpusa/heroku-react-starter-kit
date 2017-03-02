@@ -1,6 +1,8 @@
 # heroku-demo-react
 
-It simple demo parser youtube video with config deployment to heroku
+It simple demo parser youtube video with config deployment to heroku.
+
+Also can use as React Starter Kit, it easy run localhost and prepare files for deploy.
 
 ## Functions
 
@@ -19,6 +21,7 @@ It simple demo parser youtube video with config deployment to heroku
 * postcss
 * classnames
 * react-addons-perf
+* eslint with support react and ES7
 
 ## Demo
 
@@ -58,6 +61,10 @@ npm run postinstall   # prepare bundle.js for production server, used for heroku
 
 ```bash
 npm start             # start node server
+```
+
+```bash
+npm run lint          # run lint
 ```
 
 ## Documentation

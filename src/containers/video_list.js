@@ -5,12 +5,12 @@ import VideoListItem from './video_list_item';
 import { selectVideo } from '../actions/index';
 
 class VideoList extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-    this.onVideoSelect = this.onVideoSelect.bind(this);
+    this.handleVideoSelect = this.handleVideoSelect.bind(this);
   }
 
-  onVideoSelect(video) {
+  handleVideoSelect(video) {
     this.props.selectVideo(video.id.videoId);
   }
 
@@ -18,20 +18,25 @@ class VideoList extends Component {
     const videoItems = this.props.videos.map((video) => {
       return (
         <VideoListItem
-          onVideoSelect={this.onVideoSelect}
-          key={video.id.videoId}
-          video={video}
-          />
+            key={video.id.videoId}
+            onVideoSelect={this.handleVideoSelect}
+            video={video}
+        />
       );
     });
 
-  return (
-    <ul className="col-md-4 list-group">
-      {videoItems}
-    </ul>
+    return (
+      <ul className="col-md-4 list-group">
+        {videoItems}
+      </ul>
     );
   }
 }
+
+VideoList.propTypes = {
+  selectVideo: React.PropTypes.func.isRequired,
+  videos: React.PropTypes.array.isRequired
+};
 
 function mapStateToProps(state) {
   // Whatever is returned will show up as props

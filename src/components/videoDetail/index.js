@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SelectedVideoSelector from '../../selectors/selected_video.js';
 import styles from './style.less';
+//import mixin from '../../styles/mixin.less';
 
 const VideoDetail = ({video}) => {
   if (!video) {

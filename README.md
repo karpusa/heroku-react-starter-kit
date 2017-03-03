@@ -19,9 +19,11 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 * reselect
 * webpack
 * postcss
+* [css-modules](https://github.com/css-modules/css-modules)
 * classnames
 * react-addons-perf
 * eslint with support react and ES7
+* prepared structure less styles files with support css-modules
 
 ## Demo
 

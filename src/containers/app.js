@@ -7,6 +7,7 @@ import VideoList from '../components/videoList/index';
 import VideoDetail from '../components/videoDetail/index';
 import ProfTool from '../helpers/profTool';
 import mock from '../mock.json';
+import styles from '../styles/global.less';
 
 class App extends Component {
   constructor(props) {

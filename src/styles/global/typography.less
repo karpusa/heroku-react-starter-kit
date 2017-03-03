@@ -1,0 +1,73 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+// Base
+// Paragraphs
+// Headings
+// Links
+// Lists
+// Definition lists
+// Blockquotes
+// Misc
+// Utilities
+//
+// Body font size, leadings etc have been set in variables.less
+
+html {
+  // Prevent HTML font-size change when iPhone orientation changes from portrait to landscape
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: @font;
+  font-size: @baseFontSize;
+  color: @textColor;
+}
+
+select, input, textarea {
+  font-family: @font;
+}
+
+button, label {
+  user-select: none;
+  .no-tap-highlight();
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+a {
+  color: @linkDefaultColor;
+  &:hover {
+    color: @linkDefaultHoverState;
+  }
+  &:active {
+    color: @linkDefaultActiveState;
+  }
+  .no-tap-highlight();
+}

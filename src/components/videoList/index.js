@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import VideoListItem from './video_list_item';
-import { selectVideo } from '../actions/index';
+import VideoListItem from '../videoListItem/index';
+import { selectVideo } from '../../actions/index';
 
 class VideoList extends Component {
   constructor (props) {

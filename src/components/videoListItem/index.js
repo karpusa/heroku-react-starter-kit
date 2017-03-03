@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import styles from './video_list_item.less';
+import styles from './style.less';
 import classNames from 'classnames';
 
 class VideoListItem extends Component {

@@ -2,8 +2,8 @@ import _ from 'lodash'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { searchVideo } from '../actions/index';
-import styles from './search_bar.less';
+import { searchVideo } from '../../actions/index';
+import styles from './style.less';
 
 class SearchBar extends Component {
   constructor() {

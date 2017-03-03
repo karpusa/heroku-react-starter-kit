@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { searchVideo, searchMock } from '../actions/index';
-import SearchBar from './search_bar';
-import VideoList from './video_list';
-import VideoDetail from './video_detail';
+import SearchBar from '../components/searchBar/index';
+import VideoList from '../components/videoList/index';
+import VideoDetail from '../components/videoDetail/index';
 import ProfTool from '../helpers/profTool';
 import mock from '../mock.json';
 

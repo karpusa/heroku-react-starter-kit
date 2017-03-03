@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SelectedVideoSelector from '../selectors/selected_video.js';
-import styles from './video_detail.less';
+import SelectedVideoSelector from '../../selectors/selected_video.js';
+import styles from './style.less';
 
 const VideoDetail = ({video}) => {
   if (!video) {

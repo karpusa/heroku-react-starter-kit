@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import { searchVideo, searchMock } from '../actions/index';
-import SearchBar from '../components/searchBar/index';
-import VideoList from '../components/videoList/index';
-import VideoDetail from '../components/videoDetail/index';
+import homePage from './home';
+import notFoundpage from '../components/notFound';
 import ProfTool from '../helpers/profTool';
 import mock from '../mock.json';
 import styles from '../styles/global.less';
@@ -33,9 +33,10 @@ class App extends Component {
     return (
       <div>
         { this.profToolEnable && <ProfTool /> }
-        <SearchBar />
-        <VideoDetail />
-        <VideoList />
+        <Switch>
+          <Route path='/' exact component={homePage} />
+          <Route component={notFoundpage} />
+        </Switch>
       </div>
     );
   }

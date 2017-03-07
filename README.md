@@ -15,6 +15,7 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 * react
 * redux
 * thunk middleware
+* react-router-dom v4 (beta)
 * axios
 * reselect
 * webpack
@@ -24,6 +25,10 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 * react-addons-perf
 * eslint with support react and ES7
 * prepared structure less styles files with support css-modules
+
+## Routing
+
+This is the new solution with react-router 4 beta 7, it use Switch component of react router [Read Docs](https://github.com/ReactTraining/react-router/tree/v4/packages/react-router/docs/api)
 
 ## Demo
 

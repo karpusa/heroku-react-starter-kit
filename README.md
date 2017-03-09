@@ -28,7 +28,7 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 
 ## Routing
 
-This is the new solution with react-router 4 beta 7, it use Switch component of react router [Read Docs](https://github.com/ReactTraining/react-router/tree/v4/packages/react-router/docs/api)
+This is the new solution with react-router 4 beta 8, it use Switch component of react router [Read Docs](https://github.com/ReactTraining/react-router/tree/v4/packages/react-router/docs/api)
 
 ## Demo
 

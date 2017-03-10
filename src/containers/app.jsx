@@ -50,7 +50,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  history: React.PropTypes.func.isRequired,
+  history: React.PropTypes.object.isRequired,
   searchMock: React.PropTypes.func.isRequired,
   searchVideo: React.PropTypes.func.isRequired
 };

@@ -28,7 +28,7 @@
     "localhost": "webpack-dev-server",
     "postinstall": "webpack -p",
     "start": "node index.js",
-    "lint": "eslint src"
+    "lint": "eslint src --ext .js --ext .jsx"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -49,6 +49,7 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.0",
+    "history": "^4.6.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "lodash": "^3.10.1",
@@ -57,6 +58,7 @@
     "react-addons-perf": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^4.0.0",
+    "react-router": "^4.0.0-beta.8",
     "react-router-dom": "^4.0.0-beta.8",
     "redux": "^3.0.4",
     "redux-thunk": "^2.2.0",

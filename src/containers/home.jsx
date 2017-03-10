@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchBar from '../components/searchBar/index';
-import VideoList from '../components/videoList/index';
-import VideoDetail from '../components/videoDetail/index';
+import SearchBar from '../components/searchBar';
+import VideoList from '../components/videoList';
+import VideoDetail from '../components/videoDetail';
 
 const noPage = () => {
   return (

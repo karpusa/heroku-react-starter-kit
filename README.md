@@ -2,7 +2,7 @@
 
 It simple demo parser youtube video with config deployment to heroku.
 
-Also can use as React Starter Kit, it easy run localhost and prepare files for deploy.
+It good point to use as React Starter Kit, it easy run localhost and prepare files for deploy.
 
 ## Functions
 
@@ -26,6 +26,7 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 * react-addons-perf
 * eslint with support react and ES7
 * prepared structure less styles files with support css-modules
+* fetch data before component rendering
 
 ## Routing
 
@@ -74,6 +75,10 @@ npm start             # start node server
 ```bash
 npm run lint          # run lint
 ```
+
+## Author
+
+[Vitalijs Karpusa](http://www.karpusa.lv)
 
 ## Documentation
 

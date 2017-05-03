@@ -8,7 +8,6 @@ import VideoDetail from '../components/videoDetail';
 import mock from '../mock.json';
 
 const home = (props) => {
-  console.log(props);
   return (
     <div>
       <SearchBar />

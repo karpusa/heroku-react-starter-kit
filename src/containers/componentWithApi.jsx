@@ -16,10 +16,10 @@ const componentWithApi = (BaseComponent, options) => {
     lifecycle({
       componentDidMount() {
         if (callbacks) {
-          callbacks.map(r => r(this.props.store.dispatch));
+          callbacks.map(r => r(this.props.dispatch));
         }
         if (requests) {
-          Promise.all(requests.map(r => r(this.props.store.dispatch)))
+          Promise.all(requests.map(r => r(this.props.dispatch)))
             .then(() => {
               this.props.setLoadedRequest(true);
             }).catch((reason) => {

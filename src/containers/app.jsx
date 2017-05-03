@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
-import { searchVideo, searchMock } from '../actions';
-import componentWithApi from './componentWithApi';
 import homePage from './home';
 import notFoundpage from '../components/notFound';
 import ProfTool from '../helpers/profTool';
-import mock from '../mock.json';
 import styles from '../styles/global.less';
 import { Router } from 'react-router';
 
@@ -43,29 +40,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  history: React.PropTypes.object.isRequired,
-  store: React.PropTypes.object.isRequired
+  history: React.PropTypes.object.isRequired
 };
 
-let requests, callbacks;
-
-if (window.location.search.indexOf('mock') !== -1) {
-  callbacks = [
-    searchMock(mock)
-  ];
-} else {
-  requests = [
-    searchVideo('Simon\'s Cat')
-    //() => new Promise((resolve) => setTimeout(resolve, 2000)),
-    //() => new Promise((resolve, reject) => {
-    //   reject('reject');
-    //})
-  ];
-}
-
-const options = {
-  requests,
-  callbacks
-};
-
-export default componentWithApi(App, options);
+export default App;

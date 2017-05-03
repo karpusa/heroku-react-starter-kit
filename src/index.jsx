@@ -23,7 +23,6 @@ ReactDOM.render(
   <Provider store={store}>
     <App
         history={history}
-        store={store}
     />
   </Provider>,
   document.querySelector('.container')

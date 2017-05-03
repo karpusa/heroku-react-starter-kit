@@ -14,6 +14,7 @@ Also can use as React Starter Kit, it easy run localhost and prepare files for d
 
 * react
 * redux
+* recompose
 * thunk middleware
 * react-router-dom v4 (beta)
 * axios

@@ -3,7 +3,7 @@ import SearchBar from '../components/searchBar';
 import VideoList from '../components/videoList';
 import VideoDetail from '../components/videoDetail';
 
-const noPage = () => {
+const home = () => {
   return (
     <div>
       <SearchBar />
@@ -13,4 +13,4 @@ const noPage = () => {
   );
 };
 
-export default noPage;
+export default home;

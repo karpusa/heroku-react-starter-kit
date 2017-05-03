@@ -30,8 +30,7 @@ export function searchVideo(term) {
       type: 'video',
       maxResults: 10
     };
-
-    axios.get(API_URL, { params: params })
+    return axios.get(API_URL, { params: params })
       .then(function(response) {
         dispatch(
           {
@@ -42,9 +41,6 @@ export function searchVideo(term) {
         if (response.data.items[0]) {
           dispatch(selectVideo(response.data.items[0].id.videoId));
         }
-      })
-      .catch(function(error) {
-        console.error(error);
       });
   };
 }

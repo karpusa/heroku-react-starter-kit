@@ -12,6 +12,7 @@ class SearchBar extends Component {
   }
 
   searchVideo = _.debounce((term) => {
+    // TODO loading
     this.props.searchVideo(term);
   }, 300);
 

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Route, Switch } from 'react-router-dom'
 import { searchVideo, searchMock } from '../actions';
+import componentWithApi from './componentWithApi';
 import homePage from './home';
 import notFoundpage from '../components/notFound';
 import ProfTool from '../helpers/profTool';
@@ -14,12 +13,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.profToolEnable = false;
-
-    if (window.location.search.indexOf('mock')===-1) {
-      props.searchVideo('Simon\'s Cat');
-    } else {
-      props.searchMock(mock);
-    }
 
     if (window.location.search.indexOf('proftool') >= 0) {
       this.profToolEnable = true;
@@ -51,12 +44,28 @@ class App extends Component {
 
 App.propTypes = {
   history: React.PropTypes.object.isRequired,
-  searchMock: React.PropTypes.func.isRequired,
-  searchVideo: React.PropTypes.func.isRequired
+  store: React.PropTypes.object.isRequired
 };
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ searchVideo, searchMock }, dispatch);
+let requests, callbacks;
+
+if (window.location.search.indexOf('mock') !== -1) {
+  callbacks = [
+    searchMock(mock)
+  ];
+} else {
+  requests = [
+    searchVideo('Simon\'s Cat')
+    //() => new Promise((resolve) => setTimeout(resolve, 2000)),
+    //() => new Promise((resolve, reject) => {
+    //   reject('reject');
+    //})
+  ];
 }
 
-export default connect(null, mapDispatchToProps)(App);
+const options = {
+  requests,
+  callbacks
+};
+
+export default componentWithApi(App, options);

@@ -21,7 +21,10 @@ history.listen((location, action) => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App history={history} />
+    <App
+        history={history}
+        store={store}
+    />
   </Provider>,
   document.querySelector('.container')
 );

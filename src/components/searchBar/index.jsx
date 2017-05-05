@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { searchVideo } from '../../actions/index';
@@ -30,7 +31,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
-  searchVideo: React.PropTypes.func.isRequired,
+  searchVideo: PropTypes.func.isRequired,
 };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SelectedVideoSelector from '../../selectors/selected_video.js';
 import styles from './style.less';
@@ -31,7 +32,7 @@ const VideoDetail = ({video}) => {
 };
 
 VideoDetail.propTypes = {
-  video: React.PropTypes.object
+  video: PropTypes.object
 };
 
 VideoDetail.defaultProps = {

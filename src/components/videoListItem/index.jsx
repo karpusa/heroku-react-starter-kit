@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styles from './style.less';
 import classNames from 'classnames';
@@ -49,9 +50,9 @@ class VideoListItem extends Component {
 }
 
 VideoListItem.propTypes = {
-  onVideoSelect: React.PropTypes.func.isRequired,
-  selected_video_id: React.PropTypes.string,
-  video: React.PropTypes.object.isRequired
+  onVideoSelect: PropTypes.func.isRequired,
+  selected_video_id: PropTypes.string,
+  video: PropTypes.object.isRequired
 };
 
 VideoListItem.defaultProps = {

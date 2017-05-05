@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import VideoListItem from '../videoListItem';
@@ -34,8 +35,8 @@ class VideoList extends Component {
 }
 
 VideoList.propTypes = {
-  selectVideo: React.PropTypes.func.isRequired,
-  videos: React.PropTypes.array.isRequired
+  selectVideo: PropTypes.func.isRequired,
+  videos: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state) {

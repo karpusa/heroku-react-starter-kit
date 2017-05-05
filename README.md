@@ -12,11 +12,11 @@ It good point to use as React Starter Kit, it easy run localhost and prepare fil
 
 ## Features
 
-* react
+* react v15.5
 * redux
 * recompose
 * thunk middleware
-* react-router-dom v4 (beta)
+* react-router v4
 * axios
 * reselect
 * webpack

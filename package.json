@@ -17,6 +17,7 @@
     "heroku",
     "express",
     "react",
+    "react-router",
     "redux",
     "reselect",
     "lint",

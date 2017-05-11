@@ -8,7 +8,7 @@ import styles from './style.less';
 const VideoDetail = ({video}) => {
   if (!video) {
     return (
-      <div>{'Loading...'}</div>
+      <div className="col-md-8">{'Not found.'}</div>
     )
   }
 

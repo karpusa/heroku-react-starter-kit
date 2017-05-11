@@ -21,7 +21,7 @@ export function searchMock(data) {
   }
 }
 
-export function searchVideo(term) {
+export function searchVideo(term, options = {}) {
   return (dispatch) => {
     const params = {
       part: 'snippet',
@@ -30,7 +30,11 @@ export function searchVideo(term) {
       type: 'video',
       maxResults: 10
     };
-    return axios.get(API_URL, { params: params })
+
+    return axios.get(API_URL, {
+      params: params,
+      ...options
+    })
       .then(function(response) {
         dispatch(
           {

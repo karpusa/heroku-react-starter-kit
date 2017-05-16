@@ -1,8 +1,8 @@
 {
   "name": "heroku-demo-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Vitalijs Karpusa <vkarpusha@gmail.com> (http://www.karpusa.lv)",
-  "description": "React demo parser youtube video with deploy to herok",
+  "description": "React demo parser youtube video with deploy to heroku, use as React Starter Kit",
   "engines": {
     "node": "5.9.1"
   },

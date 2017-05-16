@@ -23,7 +23,7 @@ const componentWithApi = (BaseComponent, options) => {
             .then(() => {
               this.props.setLoadedRequest(true);
             }).catch((reason) => {
-              this.props.setFailedRequest(`error message - ${reason}`);
+              this.props.setFailedRequest(reason.message);
             })
         }
       }

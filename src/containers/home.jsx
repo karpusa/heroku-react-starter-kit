@@ -26,10 +26,10 @@ if (window.location.search.indexOf('mock') !== -1) {
   ];
 } else {
   requests = [
-    searchVideo('Simon\'s Cat'),
+    searchVideo('Simon\'s Cat')
     //() => new Promise((resolve) => setTimeout(resolve, 2000)),
     // () => new Promise((resolve, reject) => {
-    //   reject('reject');
+    //   reject(new Error('reject'));
     // })
   ];
 }

@@ -21,33 +21,62 @@ export function searchMock(data) {
   }
 }
 
-export function searchVideo(term, options = {}) {
-  return (dispatch) => {
-    const params = {
-      part: 'snippet',
-      key: API_KEY,
-      q: term,
-      type: 'video',
-      maxResults: 10
-    };
+export const searchVideo = (term, options = {}) => async (dispatch) => {
+  const params = {
+    part: 'snippet',
+    key: API_KEY,
+    q: term,
+    type: 'video',
+    maxResults: 10
+  };
 
-    return axios.get(API_URL, {
+  try {
+    let {data} = await axios.get(API_URL, {
       params: params,
       ...options
-    })
-      .then(function(response) {
-        dispatch(
-          {
-            type: SEARCH_VIDEO,
-            payload: response.data.items
-          }
-        );
-        if (response.data.items[0]) {
-          dispatch(selectVideo(response.data.items[0].id.videoId));
-        }
-      });
-  };
-}
+    });
+
+    dispatch(
+      {
+        type: SEARCH_VIDEO,
+        payload: data.items
+      }
+    );
+    if (data.items[0]) {
+      dispatch(selectVideo(data.items[0].id.videoId));
+    }
+  } catch(error) {
+    throw new Error(error);
+  }
+};
+
+// export function searchVideo(term, options = {}) {
+//   return (dispatch) => {
+//     const params = {
+//       part: 'snippet',
+//       key: API_KEY,
+//       q: term,
+//       type: 'video',
+//       maxResults: 10
+//     };
+//
+//     return axios.get(API_URL, {
+//       params: params,
+//       ...options
+//     })
+//       .then(function(response) {
+//         dispatch(
+//           {
+//             type: SEARCH_VIDEO,
+//             payload: response.data.items
+//           }
+//         );
+//         if (response.data.items[0]) {
+//           dispatch(selectVideo(response.data.items[0].id.videoId));
+//         }
+//       });
+//   };
+// }
 
 export function selectVideo(id) {
   return {

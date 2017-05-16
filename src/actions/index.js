@@ -35,6 +35,7 @@ export const searchVideo = (term, options = {}) => async (dispatch) => {
       params: params,
       ...options
     });
+    // await dispatch(testExample());
 
     dispatch(
       {
@@ -50,6 +51,17 @@ export const searchVideo = (term, options = {}) => async (dispatch) => {
   }
 };
 
+// Just Example
+// export const testExample = () => async (dispatch) => {
+//   try {
+//     await new Promise((resolve) => setTimeout(resolve, 5000));
+//     //dispatch({ type: ACTION_SUCCESS });
+//   } catch(error) {
+//     throw new Error(error);
+//   }
+// };
+
+// Old style
 // export function searchVideo(term, options = {}) {
 //   return (dispatch) => {
 //     const params = {

@@ -23,9 +23,10 @@ It good point to use as React Starter Kit, it easy run localhost and prepare fil
 * postcss
 * [css-modules](https://github.com/css-modules/css-modules)
 * classnames
+* prepared structure less styles files with support css-modules
 * react-addons-perf
 * eslint with support react and ES7
-* prepared structure less styles files with support css-modules
+* ES7 async function and await expression
 * fetch data before component rendering
 
 ## Routing

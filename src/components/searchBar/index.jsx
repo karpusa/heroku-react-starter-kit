@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { searchVideo } from '../../actions/index';
-import Loader from '../loader';
+import { searchVideo } from 'actions/index';
+import Loader from 'components/loader';
 import styles from './style.less';
 import axios from 'axios';
 

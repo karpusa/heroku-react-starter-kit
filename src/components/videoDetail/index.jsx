@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import SelectedVideoSelector from '../../selectors/selected_video.js';
+import SelectedVideoSelector from 'selectors/selected_video';
 import styles from './style.less';
 //import mixin from '../../styles/mixin.less';
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { compose, lifecycle, branch, renderNothing, withState, renderComponent } from 'recompose'
+import LoadingScreen from 'components/loadingScreen';
 
 // returns HOC
 const componentWithApi = (BaseComponent, options) => {
@@ -40,7 +41,7 @@ const componentWithApi = (BaseComponent, options) => {
           return (<div>{'Error status:'} {prop.failedRequest}</div>);
         } else {
           // TODO Component for Loading
-          return (<div>{'Loading...'}</div>);
+          return <LoadingScreen />;
         }
       })
     )

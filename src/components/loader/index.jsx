@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './style.less';
+import Loading from 'components/loading';
 
 class loader extends Component {
   constructor(props) {
@@ -16,11 +16,7 @@ class loader extends Component {
 
   render() {
     return (
-      this.state.enable &&
-        <div
-            className={styles.loader}
-            style={this.props.style}
-        />
+      this.state.enable && <Loading size='xs' />
     );
   }
 }

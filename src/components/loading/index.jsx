@@ -5,19 +5,19 @@ import PropTypes from 'prop-types';
 
 console.log(styles);
 
-const loadingScreen = (props) => {
+const loading = (props) => {
   console.log(props.size);
-  const loadingClass = classNames(styles.loading, {
-    [styles[`loading_${props.size}`]] : props.size
+  const rootClass = classNames(styles.root, {
+    [styles[`root_${props.size}`]] : props.size
   });
-  const loadingSquareClass = classNames(styles.loading__square, {
-    [styles[`loading__square_${props.size}`]] : props.size
+  const rootSquareClass = classNames(styles.root__square, {
+    [styles[`root__square_${props.size}`]] : props.size
   });
   return (
-    <div className={loadingClass}>
+    <div className={rootClass}>
       {[...Array(7)].map((x, i) =>
         <div
-            className={loadingSquareClass}
+            className={rootSquareClass}
             key={i}
         />
       )}
@@ -25,12 +25,12 @@ const loadingScreen = (props) => {
   )
 };
 
-loadingScreen.propTypes = {
+loading.propTypes = {
   size: PropTypes.string
 };
 
-loadingScreen.defaultProps = {
+loading.defaultProps = {
   size: null
 };
 
-export default loadingScreen;
+export default loading;

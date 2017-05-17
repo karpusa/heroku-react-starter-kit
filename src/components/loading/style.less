@@ -65,7 +65,7 @@
 }
 
 // Set the rotation to '-135deg' to get a heart shaped loading indicator. 😘
-.loading {
+.root {
   position: absolute;
   z-index: 999;
   top: 0;
@@ -86,7 +86,7 @@
 // Like I said, I'm using 'position: absolute' because of the background-attachment that otherwise doesn't work.
 // The 'background-attachment: fixed' lets it look like the gradient is flowing across all pieces instead of each piece individually.
 // At the end of the style you can see a little loop that sets different negative animation delays so the pieces start animating at different positions.
-.loading__square {
+.root__square {
   position: absolute;
   top: 0;
   left: 0;

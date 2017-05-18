@@ -1,6 +1,7 @@
 import React from 'react'
 import { compose, lifecycle, branch, renderNothing, withState, renderComponent } from 'recompose'
 import Loading from 'components/loading';
+import Error from 'components/error';
 
 // returns HOC
 const componentWithApi = (BaseComponent, options) => {
@@ -8,6 +9,10 @@ const componentWithApi = (BaseComponent, options) => {
     requests,
     callbacks
   } = options;
+
+  const handleOnClickButton = () => {
+    global.location.reload();
+  };
 
   return compose(
     // are we done?
@@ -37,10 +42,16 @@ const componentWithApi = (BaseComponent, options) => {
       // loading ... loading .. loading
       renderComponent((prop) => {
         if (prop.failedRequest) {
-          // TODO Component for this
-          return (<div>{'Error status:'} {prop.failedRequest}</div>);
+          return (
+            <Error
+                buttonText="Refresh page"
+                handleOnClickButton={handleOnClickButton}
+                header="500"
+                row1="Error status"
+                row2={prop.failedRequest}
+            />
+          );
         } else {
-          // TODO Component for Loading
           return <Loading />;
         }
       })

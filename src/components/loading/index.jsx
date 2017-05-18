@@ -3,10 +3,7 @@ import styles from './style.less';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-console.log(styles);
-
 const loading = (props) => {
-  console.log(props.size);
   const rootClass = classNames(styles.root, {
     [styles[`root_${props.size}`]] : props.size
   });

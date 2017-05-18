@@ -30,8 +30,10 @@ class SearchBar extends Component {
       }).then(() => {
         this.loader.setStatus(false);
         this.source = null;
-      }).catch(() => {
+      }).catch((reason) => {
+        //TODO in component 'Loader' styled alert when catch API error
         this.loader.setStatus(false);
+        alert(`API error: ${reason.message}`);
         this.source = null;
       })
   }, 300);

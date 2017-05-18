@@ -10,11 +10,8 @@ import { Router } from 'react-router';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.profToolEnable = false;
 
-    if (window.location.search.indexOf('proftool') >= 0) {
-      this.profToolEnable = true;
-    }
+    this.profToolEnable = global.location.search.indexOf('proftool') >= 0;
   }
 
   shouldComponentUpdate(nextProps, nextState) {

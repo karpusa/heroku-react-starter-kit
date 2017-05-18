@@ -20,7 +20,7 @@ const home = () => {
 
 let requests, callbacks;
 
-if (window.location.search.indexOf('mock') !== -1) {
+if (global.location.search.indexOf('mock') !== -1) {
   callbacks = [
     searchMock(mock)
   ];
@@ -29,7 +29,7 @@ if (window.location.search.indexOf('mock') !== -1) {
     searchVideo('Simon\'s Cat')
     //() => new Promise((resolve) => setTimeout(resolve, 2000)),
     // () => new Promise((resolve, reject) => {
-    //   reject(new Error('reject'));
+    //   reject(new Error('API internal error'));
     // })
   ];
 }

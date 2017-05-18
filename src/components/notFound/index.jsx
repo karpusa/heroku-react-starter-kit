@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Error from 'components/error';
 
-const notFoundpage = () => {
+const notFound = () => {
   return (
-    <div>
-      <h3>404 page not found</h3>
-      <p>We are sorry but the page you are looking for does not exist.</p>
-      <Link to='/'>To homepage</Link>
-    </div>
+    <Error
+        buttonText="Back to homepage"
+        header="404"
+        row1="Page not found"
+        row2="We are sorry but the page you are looking for does not exist."
+    />
   );
 };
 
-export default notFoundpage;
+export default notFound;

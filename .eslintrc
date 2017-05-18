@@ -24,6 +24,7 @@
     "react/no-set-state": 0
   },
   "globals": {
-    "Promise": true
+    "Promise": true,
+    "global": true
   }
 }

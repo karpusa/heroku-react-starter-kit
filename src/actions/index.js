@@ -1,7 +1,4 @@
-import axios from 'axios';
-
-const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
-const API_URL = 'https://www.googleapis.com/youtube/v3/search';
+import api from 'services/api';
 
 export const SEARCH_VIDEO = 'SEARCH_VIDEO';
 export const SELECT_VIDEO = 'SELECT_VIDEO';
@@ -21,20 +18,9 @@ export function searchMock(data) {
   }
 }
 
-export const searchVideo = (term, options = {}) => async (dispatch) => {
-  const params = {
-    part: 'snippet',
-    key: API_KEY,
-    q: term,
-    type: 'video',
-    maxResults: 10
-  };
-
+export const searchVideo = (term, config) => async (dispatch) => {
   try {
-    let {data} = await axios.get(API_URL, {
-      params: params,
-      ...options
-    });
+    let {data} = await api.Videos.search(term, 10, config);
     // await dispatch(testExample());
 
     dispatch(

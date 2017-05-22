@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import VideoListItem from 'components/videoListItem';
 import { selectVideo } from 'actions';
+import styles from './style.less';
 
 class VideoList extends Component {
   constructor (props) {
@@ -27,7 +28,7 @@ class VideoList extends Component {
     });
 
     return (
-      <ul className="col-md-4 list-group">
+      <ul className={styles.root}>
         {videoItems}
       </ul>
     );

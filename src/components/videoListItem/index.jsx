@@ -24,26 +24,17 @@ class VideoListItem extends Component {
   render() {
     const imageUrl = this.props.video.snippet.thumbnails.default.url;
     const isActive = this.props.selected_video_id === this.props.video.id.videoId ? styles.isActive : null;
-    const liClasses = classNames(styles.root, isActive, {
-      'list-group-item': true
-    });
+    const liClasses = classNames(styles.root, isActive);
 
     return (
       <li
           className={liClasses}
           onClick={this.handleVideoSelect}
       >
-        <div className="media">
-          <div className="media-left">
-            <img
-                className="media-object"
-                src={imageUrl}
-            />
-          </div>
-          <div className="media-body">
-            <div className="media-heading">{this.props.video.snippet.title}</div>
-          </div>
+        <div className={styles.root__left}>
+          <img src={imageUrl} />
         </div>
+        <div className={styles.root__right}>{this.props.video.snippet.title}</div>
       </li>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SelectedVideoSelector from 'selectors/selected_video';
+import EmbedResponsive from 'components/embedResponsive';
 import styles from './style.less';
 
 const VideoDetail = ({video}) => {
@@ -15,13 +16,8 @@ const VideoDetail = ({video}) => {
   const url = `https://www.youtube.com/embed/${videoId}`;
 
   return (
-    <div className="col-md-8">
-      <div className="embed-responsive embed-responsive-16by9">
-        <iframe
-            className="embed-responsive-item"
-            src={url}
-        />
-      </div>
+    <div>
+      <EmbedResponsive url={url} />
       <div className={styles.details}>
         <div>{video.snippet.title}</div>
         <div>{video.snippet.description}</div>

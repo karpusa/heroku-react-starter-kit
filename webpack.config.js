@@ -39,8 +39,20 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: cssLoaders })
+        use: ExtractTextPlugin.extract({fallback: 'style-loader', use: cssLoaders})
       },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        })
+      }
     ]
   },
   resolve: {
@@ -48,10 +60,10 @@ module.exports = {
       path.resolve('./src'),
       path.resolve('./node_modules')
     ],
-    extensions: ['.js', '.jsx', '.less']
+    extensions: ['.js', '.jsx', '.less', '.css']
   },
   plugins: [
-    new ExtractTextPlugin({filename: 'style.css', disable: false, allChunks: true })
+    new ExtractTextPlugin({filename: 'style.css', disable: false, allChunks: true})
   ],
   devServer: {
     historyApiFallback: true,

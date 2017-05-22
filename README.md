@@ -22,12 +22,14 @@ It good point to use as React Starter Kit, it easy run localhost and prepare fil
 * webpack
 * postcss
 * [css-modules](https://github.com/css-modules/css-modules)
-* classnames
-* prepared structure less styles files with support css-modules
 * react-addons-perf
 * eslint with support react and ES7
 * ES7 async function and await expression
 * fetch data before component rendering
+* [Material Design UI Components for the Web](https://material.io/components/web/)
+* prepared structure less styles files with support css-modules
+* [classnames](https://github.com/JedWatson/classnames)
+* CSS resets [normalize.css](https://github.com/necolas/normalize.css/) and uniforming the default look across different browsers
 
 ## Routing
 

@@ -2,12 +2,20 @@
 
 .root {
   cursor: pointer;
+  padding: .75rem 1.25rem;
+  &:hover {
+    background-color: #eee;
+  }
+  &.isActive {
+    background: #e8e8e8;
+  }
 }
-
-.root:hover {
-  background-color: #eee;
+.root__left {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 10px;
 }
-
-.root.isActive {
-  background: #e8e8e8;
+.root__right {
+  display: table-cell;
+  vertical-align: top;
 }

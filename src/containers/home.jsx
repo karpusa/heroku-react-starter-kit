@@ -10,9 +10,19 @@ import mock from 'mock.json';
 const home = () => {
   return (
     <div>
-      <SearchBar />
-      <VideoDetail />
-      <VideoList />
+      <div className="mdc-layout-grid">
+        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <SearchBar />
+        </div>
+      </div>
+      <div className="mdc-layout-grid">
+        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-8-tablet">
+          <VideoDetail />
+        </div>
+        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
+          <VideoList />
+        </div>
+      </div>
     </div>
   );
 };

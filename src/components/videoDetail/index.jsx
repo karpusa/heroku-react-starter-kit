@@ -19,7 +19,7 @@ const VideoDetail = ({video}) => {
     <div>
       <EmbedResponsive url={url} />
       <div className={styles.details}>
-        <div>{video.snippet.title}</div>
+        <div className="mdc-typography--title">{video.snippet.title}</div>
         <div>{video.snippet.description}</div>
       </div>
     </div>

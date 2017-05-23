@@ -5,7 +5,7 @@ let API_URL = 'https://www.googleapis.com/youtube/v3';
 
 // Mocks server data with json-server
 if (global.location.search.indexOf('mock') !== -1) {
-  API_URL = 'http://localhost:3000';
+  API_URL = `${global.location.protocol}//${global.location.hostname}:3000`;
 }
 
 const params = {

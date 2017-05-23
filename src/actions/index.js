@@ -3,21 +3,6 @@ import api from 'services/api';
 export const SEARCH_VIDEO = 'SEARCH_VIDEO';
 export const SELECT_VIDEO = 'SELECT_VIDEO';
 
-export function searchMock(data) {
-  return (dispatch) => {
-    dispatch(
-      {
-        type: SEARCH_VIDEO,
-        payload: data.videos
-      }
-    );
-
-    if (data.videos[0]) {
-      dispatch(selectVideo(data.videos[0].id.videoId));
-    }
-  }
-}
-
 export const searchVideo = (term, config) => async (dispatch) => {
   try {
     let {data} = await api.Videos.search(term, 10, config);

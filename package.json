@@ -26,10 +26,11 @@
     "es7"
   ],
   "scripts": {
-    "localhost": "webpack-dev-server",
+    "localhost": "webpack-dev-server | npm run api",
     "postinstall": "webpack -p",
     "start": "node index.js",
-    "lint": "eslint src --ext .js --ext .jsx"
+    "lint": "eslint src --ext .js --ext .jsx",
+    "api": "json-server --watch mock/db.js --port 3000"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -51,9 +52,11 @@
     "babel-preset-stage-1": "^6.24.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.1",
+    "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "history": "^4.6.1",
+    "json-server": "^0.10.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "lodash": "^4.17.4",

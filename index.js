@@ -20,8 +20,9 @@ app.listen(app.get('port'), function() {
 
 
 const jsonServer = require('json-server');
+const mockDB = require('./mock/db.js');
 const server = jsonServer.create();
-const router = jsonServer.router('mock/db.js');
+const router = jsonServer.router(mockDB());
 const middlewares = jsonServer.defaults();
 const port = 3000;
 server.use(middlewares);

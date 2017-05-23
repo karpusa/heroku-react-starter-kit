@@ -1,7 +1,12 @@
 import axios from 'axios';
 
 const API_KEY = 'AIzaSyD22bSJa6989EsRhSr2TyG4RYkyh84amnc';
-const API_URL = 'https://www.googleapis.com/youtube/v3';
+let API_URL = 'https://www.googleapis.com/youtube/v3';
+
+// Mocks server data with json-server
+if (global.location.search.indexOf('mock') !== -1) {
+  API_URL = `${global.location.protocol}//${global.location.hostname}:3000`;
+}
 
 const params = {
   key: API_KEY,

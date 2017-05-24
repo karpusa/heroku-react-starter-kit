@@ -18,6 +18,7 @@ It good point to use as React Starter Kit, it easy run localhost and prepare fil
 * thunk middleware
 * react-router v4
 * axios
+* mock data with [json-server](https://github.com/typicode/json-server)
 * reselect
 * webpack
 * postcss
@@ -39,9 +40,15 @@ Routing with react-router version 4, it use Switch component of react router [Re
 
 https://heroku-demo-react.herokuapp.com
 
+## Service API
+
+Folder `src/services/api.js` easy create you own API services to connect real data with [axios](https://github.com/mzabriskie/axios)
+
 ## Mock data
 
-You can use mock data with 1000 items, add to url `mock`
+Easy create mock data in folder `/mock` connected with [json-server](https://github.com/typicode/json-server)
+
+You can use mock data with 1000 items, add to url `mock` parametr
 
 http://localhost:8080/webpack-dev-server/?mock
 
@@ -57,14 +64,15 @@ http://localhost:8080/webpack-dev-server/?mock&proftool
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+Make sure you have [Node.js](http://nodejs.org/)
+Also for Heroku can be helpfull [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```bash
 npm install           # install nodejs dependencies
 ```
 
 ```bash
-npm run localhost     # running local server on http://localhost:8080/webpack-dev-server/
+npm run localhost     # running local server on http://localhost:8080/webpack-dev-server/ and json-server with mock data on port 3000
 ```
 
 ```bash
@@ -72,7 +80,7 @@ npm run postinstall   # prepare bundle.js for production server, used for heroku
 ```
 
 ```bash
-npm start             # start node server
+npm start             # start node server, starting Node.js Express application in index.js
 ```
 
 ```bash

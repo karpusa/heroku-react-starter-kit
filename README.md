@@ -1,14 +1,16 @@
-# heroku-demo-react
+# Heroku React Starter Kit
 
-It simple demo parser youtube video with config deployment to heroku.
+It simple React Starter Kit with latest features and application demo with API Youtube, config deployment to heroku.
 
-It good point to use as React Starter Kit, it easy run localhost and prepare files for deploy.
+Easy run localhost and prepare files for deploy.
 
 ## Functions
 
 * Search video
 * List video
 * Detail video
+* 404 for page not found, and 500 for error.
+* Loader for fetch data
 
 ## Features
 

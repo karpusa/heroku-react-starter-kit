@@ -4,7 +4,7 @@
   "author": "Vitalijs Karpusa <vkarpusha@gmail.com> (http://www.karpusa.lv)",
   "description": "React demo parser youtube video with deploy to heroku, use as React Starter Kit",
   "engines": {
-    "node": "5.9.1"
+    "node": ">=6.5"
   },
   "main": "index.js",
   "repository": {

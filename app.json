@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/karpusa/heroku-demo-react.git",
+  "name": "Heroku React Starter Kit",
+  "description": "Simple React Starter Kit with latest features and application demo with API Youtube, config deployment to heroku.",
+  "repository": "https://github.com/karpusa/heroku-react-starter-kit",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"],
+  "keywords": ["node", "express", "react", "redux", "youtube"],
   "image": "heroku/nodejs"
 }

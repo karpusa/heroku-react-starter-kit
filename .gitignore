@@ -2,8 +2,10 @@
 node_modules
 npm-debug.log
 bundle.js
+style.css
 
 # Local development
+*.map
 *.env
 *.dev
 .DS_Store

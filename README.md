@@ -14,7 +14,7 @@ Easy run localhost and prepare files for deploy.
 
 ## Features
 
-* react v15.5
+* react v16.1.1
 * redux
 * recompose
 * thunk middleware
@@ -25,7 +25,6 @@ Easy run localhost and prepare files for deploy.
 * webpack
 * postcss
 * [css-modules](https://github.com/css-modules/css-modules)
-* react-addons-perf
 * eslint with support react and ES7
 * ES7 async function and await expression
 * fetch data before component rendering
@@ -53,16 +52,6 @@ Easy create mock data in folder `/mock` connected with [json-server](https://git
 You can use mock data with 1000 items, add to url `mock` parametr
 
 http://localhost:8080/webpack-dev-server/?mock
-
-## React perfomance tool
-
-To enable react perfomance tool add to url `proftool`
-
-http://localhost:8080/webpack-dev-server/?proftool
-
-Also you can use `mock` data and `proftool`
-
-http://localhost:8080/webpack-dev-server/?mock&proftool
 
 ## Running Locally
 

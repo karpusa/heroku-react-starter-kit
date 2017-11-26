@@ -3,6 +3,14 @@ import ReactDOM from 'react-dom';
 import Perf from 'react-addons-perf';
 import styles from './profTool.less';
 
+/**
+ * This component - Not used more in React 16
+ * Please use your browser’s profiling tools to get insight into which components re-render.
+ * https://reactjs.org/docs/perf.html
+ *
+ * this.profToolEnable = global.location.search.indexOf('proftool') >= 0; in consructor
+ * in render  { this.profToolEnable && <ProfTool /> }
+ */
 class profTool extends Component {
   componentDidMount() {
     this.target = document.createElement('div');

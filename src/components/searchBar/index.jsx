@@ -50,8 +50,14 @@ class SearchBar extends Component {
   render() {
     return (
       <div className={styles.root}>
-        <Loader ref={this.handleLoader} style={{top: '6px', left: '6px'}} />
-        <input defaultValue="Simon's Cat" onChange={this.handleChange} />
+        <Loader
+            ref={this.handleLoader}
+            style={{top: '6px', left: '6px'}}
+        />
+        <input
+            defaultValue="Simon's Cat"
+            onChange={this.handleChange}
+        />
       </div>
     );
   }

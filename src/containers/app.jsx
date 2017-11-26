@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom'
 import homePage from './home';
 import notFoundpage from 'components/notFound';
-import ProfTool from 'helpers/profTool';
 import { Router } from 'react-router';
 // Global Styles
 import 'styles/global.less';
@@ -14,8 +13,6 @@ import '@material/layout-grid/dist/mdc.layout-grid.css';
 class App extends Component {
   constructor(props) {
     super(props);
-
-    this.profToolEnable = global.location.search.indexOf('proftool') >= 0;
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -26,7 +23,6 @@ class App extends Component {
     return (
       <Router history={this.props.history}>
         <div>
-          { this.profToolEnable && <ProfTool /> }
           <Switch>
             <Route
                 component={homePage}

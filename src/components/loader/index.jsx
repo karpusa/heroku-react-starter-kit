@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Loading from 'components/loading';
 
 class loader extends Component {
@@ -22,11 +22,11 @@ class loader extends Component {
 }
 
 loader.propTypes = {
-  style: PropTypes.object
+  // style: PropTypes.object
 };
 
 loader.defaultProps = {
-  style: {}
+  // style: {}
 };
 
 export default loader;

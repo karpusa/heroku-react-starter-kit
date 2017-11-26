@@ -34,7 +34,9 @@ class VideoListItem extends Component {
         <div className={styles.root__left}>
           <img src={imageUrl} />
         </div>
-        <div className={styles.root__right}>{this.props.video.snippet.title}</div>
+        <div className={styles.root__right}>
+          {this.props.video.snippet.title}
+        </div>
       </li>
     );
   }

@@ -15,11 +15,13 @@ const home = () => {
         </div>
       </div>
       <div className="mdc-layout-grid">
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-8-tablet">
-          <VideoDetail />
-        </div>
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
-          <VideoList />
+        <div className="mdc-layout-grid__inner">
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-8-tablet">
+            <VideoDetail />
+          </div>
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
+            <VideoList />
+          </div>
         </div>
       </div>
     </div>

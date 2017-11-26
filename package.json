@@ -1,6 +1,6 @@
 {
   "name": "heroku-react-starter-kit",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "author": "Vitalijs Karpusa <vkarpusha@gmail.com> (http://www.karpusa.lv)",
   "description": "React demo parser youtube video with deploy to heroku, use as React Starter Kit",
   "engines": {
